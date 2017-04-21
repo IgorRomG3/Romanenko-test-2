@@ -1,10 +1,8 @@
 .header
     &__container
         width: 1413px
-// .link
-//     font-family: Lato
-//     font-weight: 300
-//     color: #004f9e
+        @media screen and (min-width:1200px)
+            width: 1170px
 .navigation-top
     padding: 20px 0;
     display: flex
@@ -33,10 +31,14 @@
     &__menu-link
         font-size: 20px
         color: #004f9e
+        @media screen and (min-width:1200px)
+            font-size: 16px
 .menu
     list-style: none
     &__item
         display: inline-block
+        &_display_b
+            display: block
     &__span
         color: #000
 .search-form
@@ -75,3 +77,5 @@
     font-family: Lato
     font-weight: 500
     font-size: 24px
+.link
+    color: #004f9e
