@@ -42,6 +42,12 @@ gulp.task('move', function () {
 
 });
 
+gulp.task('movejs', function () {
+	gulp.src('dev/js/**/*.js')
+	.pipe(gulp.dest('build/js/'))
+	.pipe(connect.reload());
+
+});
 //gulp.task('minify-css', function() {
 //  return gulp.src('build/css/*.css')
 //    .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -56,8 +62,9 @@ gulp.task('move', function () {
 
 
 gulp.task('default', function () {
-  gulp.start('connect', 'sass','htmlIncluder','move'),
+  gulp.start('connect', 'sass','htmlIncluder','move','movejs'),
 	gulp.watch(['dev/sass/**/*.sass'], ['sass']),
 	gulp.watch(['dev/**/*.html'], ['htmlIncluder']),
-	gulp.watch(['dev/img/**/*.*'], ['move']);
+	gulp.watch(['dev/img/**/*.*'], ['move']),
+  gulp.watch(['dev/js/**/*.js'], ['movejs']);
 });

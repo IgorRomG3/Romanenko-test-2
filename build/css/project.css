@@ -13,15 +13,13 @@ a {
 
 .button {
   border: 0;
-  background-color: transparent; }
+  background-color: transparent;
+  outline: none; }
 
 .title {
   font-family: Lato;
   font-weight: 500;
   font-size: 24px; }
-
-.link {
-  color: #004f9e; }
 
 .text {
   color: #000;
@@ -72,7 +70,8 @@ a {
     text-align: right;
     flex-basis: 80%; }
   .navigation-bot__menu-item {
-    display: inline-block; }
+    display: inline-block;
+    border: 1px solid transparent; }
     .navigation-bot__menu-item:hover {
       border-bottom: 1px solid #f18b00; }
     .navigation-bot__menu-item:nth-child(n+2) {
@@ -145,7 +144,8 @@ a {
   .deposits__link {
     margin-bottom: 22px;
     font-size: 24px;
-    font-weight: 600; }
+    font-weight: 600;
+    color: #004f9e; }
   .deposits__item {
     display: flex;
     flex-direction: column;
@@ -171,17 +171,28 @@ a {
     border-radius: 4px;
     border: 1px solid #d4d4d4;
     background-color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: height 1s ease; }
+    .accordeon__item_opened {
+      height: auto;
+      transition: height 1.5s ease; }
     .accordeon__item:hover {
       background-color: #f6f6f6; }
-  .accordeon__img {
+  .accordeon__button {
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 15px;
     right: 20px; }
-    .accordeon__img_hidden {
+    .accordeon__button_hidden {
       display: none; }
-    .accordeon__img_visiable {
-      display: block; }
+  .accordeon__js_plus {
+    background-image: url("../img/plus-img.png");
+    background-position: center; }
+  .accordeon__js_minus {
+    background-image: url("../img/minus-img.png");
+    background-repeat: no-repeat;
+    background-position: center; }
   .accordeon__title {
     margin-bottom: 10px;
     font-size: 20px;
@@ -198,6 +209,8 @@ a {
   padding-left: 40px; }
   .list__item {
     display: block; }
+  .list__span {
+    color: #000; }
 
 .footer__container {
   width: 1413px; }
@@ -214,4 +227,5 @@ a {
   .footer__menu__item:nth-child(n+2) {
     margin-left: 7px; }
   .footer__menu-link {
+    margin-left: 5px;
     color: #88add2; }
