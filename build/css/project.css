@@ -227,6 +227,7 @@ a {
   align-items: center; }
   .footer__menu__item:nth-child(n+2) {
     margin-left: 7px; }
-  .footer__menu-link {
-    margin-left: 5px;
-    color: #88add2; }
+
+.footer__menu-link {
+  margin-left: 5px;
+  color: #88add2; }
