@@ -126,13 +126,8 @@ ul {
   .about__list {
     margin-bottom: 117px;
     padding-left: 40px;
-    color: #f18b00;
     list-style: disc; }
-    .about__list li {
-      padding: 16px 0; }
-    .about__list span {
-      color: #000; }
-  .about p {
+  .about__wrap {
     margin-bottom: 56px;
     width: 751px; }
 

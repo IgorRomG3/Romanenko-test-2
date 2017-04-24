@@ -36,10 +36,12 @@
                     <li class="deposits__item">
                             <h4 class="deposits__title">
                                 <a href="#" class="deposits__link">
+                                    <!--Added variable -->
                                     {{deposits[0].name}}
                                 </a>
                             </h4>
                             <p class="deposits__textual">
+                                <!--Added variable -->
                                 {{deposits[0].description}}
                             </p>
                         <button class="button">
@@ -49,10 +51,12 @@
                     <li class="deposits__item">
                         <h4 class="deposits__title">
                             <a href="#" class="deposits__link">
+                                <!--Added variable -->
                                 {{deposits[1].name}}
                             </a>
                         </h4>
                         <p class="deposits__textual">
+                            <!--Added variable -->
                             {{deposits[1].description}}
                         </p>
                         <button class="button">
@@ -62,10 +66,12 @@
                     <li class="deposits__item">
                         <h4 class="deposits__title">
                             <a href="#" class="deposits__link">
+                                <!--Added variable -->
                                 {{deposits[2].name}}
                             </a>
                         </h4>
                         <p class="deposits__textual">
+                            <!--Added variable -->
                             {{deposits[2].description}}
                         </p>
                         <button class="button">
