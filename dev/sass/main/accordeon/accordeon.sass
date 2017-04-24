@@ -1,0 +1,63 @@
+.accordeon
+    margin-bottom: 48px
+    &__list
+        display: flex
+        flex-direction: column
+    &__item
+        height: 30px
+        padding: 10px
+        position: relative
+        overflow: hidden
+        border-radius: 4px
+        border: 1px solid #d4d4d4
+        background-color: #fff
+        cursor: pointer
+        transition: height 1s ease
+        &_opened
+            height: auto
+            transition: height 1.5s ease
+        &:hover
+            background-color: #f6f6f6
+    &__plus
+        width: 20px
+        height: 20px
+        border: 0
+        background-color: transparent
+        position: absolute
+        top: 15px
+        right: 20px
+        background-image: url('../img/plus-img.png')
+        background-position: center
+    &__minus
+        width: 20px
+        height: 20px
+        border: 0
+        background-color: transparent
+        position: absolute
+        top: 15px
+        right: 20px
+        background-image: url('../img/minus-img.png')
+        background-repeat: no-repeat
+        background-position: center
+        display: none
+    &__title
+        margin-bottom: 33px
+        font-family: Lato
+        font-size: 24px
+        font-weight: 500
+        color: #004f9e
+    &__footer
+        margin-top: 15px
+        display: flex
+        justify-content: space-between
+    &__list
+        flex-basis: 40%
+        margin-top: 10px
+        flex-basis: 200px
+    &__sum
+        flex-basis: 40%
+        padding-left: 115px
+        height: 110px
+        background-image: url('../img/coin-icon.png')
+        background-repeat: no-repeat
+        background-position: left
