@@ -34,9 +34,11 @@
             <section class="deposits">
                 <ul class="deposits__list">
                     <li class="deposits__item">
-                            <a href="#" class="deposits__link">
-                                {{deposits[0].name}}
-                            </a>
+                            <h4 class="deposits__title">
+                                <a href="#" class="deposits__link">
+                                    {{deposits[0].name}}
+                                </a>
+                            </h4>
                             <p class="deposits__textual">
                                 {{deposits[0].description}}
                             </p>
@@ -45,9 +47,11 @@
                             </button>
                     </li>
                     <li class="deposits__item">
-                        <a href="#" class="deposits__link">
-                            {{deposits[1].name}}
-                        </a>
+                        <h4 class="deposits__title">
+                            <a href="#" class="deposits__link">
+                                {{deposits[1].name}}
+                            </a>
+                        </h4>
                         <p class="deposits__textual">
                             {{deposits[1].description}}
                         </p>
@@ -56,9 +60,11 @@
                         </button>
                     </li>
                     <li class="deposits__item">
-                        <a href="#" class="deposits__link text">
-                            {{deposits[2].name}}
-                        </a>
+                        <h4 class="deposits__title">
+                            <a href="#" class="deposits__link">
+                                {{deposits[2].name}}
+                            </a>
+                        </h4>
                         <p class="deposits__textual">
                             {{deposits[2].description}}
                         </p>

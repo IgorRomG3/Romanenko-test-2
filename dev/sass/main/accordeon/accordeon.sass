@@ -26,6 +26,8 @@
         right: 20px
         background-image: url('../img/plus-img.png')
         background-position: center
+        &_hidden
+            display: none
     &__minus
         width: 20px
         height: 20px
@@ -38,32 +40,56 @@
         background-repeat: no-repeat
         background-position: center
         display: none
+        &_visiable
+            display: block
     &__title
         margin-bottom: 33px
         font-family: Lato
         font-size: 24px
         font-weight: 500
         color: #004f9e
-    &__text
+        &_dark
+            color: #000
+    &__textual
         font-family: Lato
         font-size: 18px
         font-weight: 300
         line-height: 30px
+        &_size_s
+           font-size: 16px 
     &__span
         margin-left: 5px
         color: #f18b00
+    &__h4
+        font-family: Lato
+        line-height: 30px
+        color: #000
+        font-size: 20px
+        font-weight: 500
     &__footer
-        margin-top: 15px
+        margin: 57px 0 71px 0
         display: flex
         justify-content: space-between
-    &__list
-        flex-basis: 40%
-        margin-top: 10px
-        flex-basis: 200px
-    &__sum
+    &__fond
         flex-basis: 40%
         padding-left: 115px
         height: 110px
         background-image: url('../img/coin-icon.png')
         background-repeat: no-repeat
         background-position: left
+    &__sum
+        color: #004f9e
+        font-family: Lato
+        font-size: 30px
+        font-weight: 500
+        line-height: 59px
+.list
+    flex-basis: 40%
+    flex-basis: 200px
+    &__item
+        padding: 2px 0
+    &__link
+        font-family: Lato
+        color: #004f9e
+        font-size: 16px
+        font-weight: 300

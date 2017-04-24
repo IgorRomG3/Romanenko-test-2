@@ -167,8 +167,9 @@ ul {
     display: flex;
     flex-direction: column;
     flex: 0 1 30%; }
+  .deposits__title {
+    margin-bottom: 22px; }
   .deposits__link {
-    margin-bottom: 22px;
     font-size: 24px;
     font-weight: 600;
     color: #004f9e; }
@@ -189,7 +190,7 @@ ul {
     .button__span:after {
       content: '';
       position: absolute;
-      top: 0;
+      top: 2px;
       right: -16px;
       width: 8px;
       height: 17px;
@@ -223,6 +224,8 @@ ul {
     right: 20px;
     background-image: url("../img/plus-img.png");
     background-position: center; }
+    .accordeon__plus_hidden {
+      display: none; }
   .accordeon__minus {
     width: 20px;
     height: 20px;
@@ -235,35 +238,60 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     display: none; }
+    .accordeon__minus_visiable {
+      display: block; }
   .accordeon__title {
     margin-bottom: 33px;
     font-family: Lato;
     font-size: 24px;
     font-weight: 500;
     color: #004f9e; }
-  .accordeon__text {
+    .accordeon__title_dark {
+      color: #000; }
+  .accordeon__textual {
     font-family: Lato;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px; }
+    .accordeon__textual_size_s {
+      font-size: 16px; }
   .accordeon__span {
     margin-left: 5px;
     color: #f18b00; }
+  .accordeon__h4 {
+    font-family: Lato;
+    line-height: 30px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500; }
   .accordeon__footer {
-    margin-top: 15px;
+    margin: 57px 0 71px 0;
     display: flex;
     justify-content: space-between; }
-  .accordeon__list {
-    flex-basis: 40%;
-    margin-top: 10px;
-    flex-basis: 200px; }
-  .accordeon__sum {
+  .accordeon__fond {
     flex-basis: 40%;
     padding-left: 115px;
     height: 110px;
     background-image: url("../img/coin-icon.png");
     background-repeat: no-repeat;
     background-position: left; }
+  .accordeon__sum {
+    color: #004f9e;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 59px; }
+
+.list {
+  flex-basis: 40%;
+  flex-basis: 200px; }
+  .list__item {
+    padding: 2px 0; }
+  .list__link {
+    font-family: Lato;
+    color: #004f9e;
+    font-size: 16px;
+    font-weight: 300; }
 
 .footer__container {
   margin: 0 auto; }
