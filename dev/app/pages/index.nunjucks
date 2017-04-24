@@ -1,0 +1,127 @@
+<!-- layout.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block header %}
+<!-- Adds the header partial -->
+{% include "partials/header.nunjucks" %}
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__container">
+            <section class="about">
+                <div class="about__head">
+                    <a href="#" class="about__microlink">KredoBank &ndash;</a>
+                    <h1 class="about__h1">Депозити</h1>
+                </div>
+                <div class="about__content">
+                    <p>Вклади від Кредобанку це надійні гарантії збереження та примноження заощаджень. Ми впевнені, що серед наших
+                        пропозицій Ви знайдете саме цей вклад, умови якого задовольнять всі Ваші очікування.</p>
+                    <h2>Переваги наших депозитiв</h2>
+                    <ul class="about__list">
+                        <li>
+                            <span>Вклади у гривнях, доларах США або ЄВРО</span>
+                        </li>
+                        <li>
+                            <span>На строк від 1 дня до 20 років</span>
+                        </li>
+                        <li>
+                            <span>Отримання коштів у будь-якому банкоматі України - безкоштовно *</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="deposits">
+                <ul class="deposits__list">
+                    <li class="deposits__item">
+                            <a href="#" class="deposits__link">
+                                {{deposits[0].name}}
+                            </a>
+                            <p class="deposits__textual">
+                                {{deposits[0].description}}
+                            </p>
+                        <button class="button">
+                                <span class="button__span">Замовити</span>
+                            </button>
+                    </li>
+                    <li class="deposits__item">
+                        <a href="#" class="deposits__link">
+                            {{deposits[1].name}}
+                        </a>
+                        <p class="deposits__textual">
+                            {{deposits[1].description}}
+                        </p>
+                        <button class="button">
+                            <span class="button__span">Замовити</span>
+                        </button>
+                    </li>
+                    <li class="deposits__item">
+                        <a href="#" class="deposits__link text">
+                            {{deposits[2].name}}
+                        </a>
+                        <p class="deposits__textual">
+                            {{deposits[2].description}}
+                        </p>
+                        <button class="button">
+                                <span class="button__span">Замовити</span>
+                            </button>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordeon">
+                <ul class="accordeon__menu">
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">Максимальний дохід</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                    </li>
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">З можливістю поповнення</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                    </li>
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">Комфортні</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                    </li>
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">Он-лайн</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                    </li>
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">Фонд гарантування вкладів фізичних осіб</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+<!-- Adds the footer partial -->
+{% include "partials/footer.nunjucks" %}
+{% endblock %}

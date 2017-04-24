@@ -4,16 +4,16 @@
         display: flex
         list-style: none
         justify-content: space-between
+    &__item
+        height: 200px
+        display: flex
+        flex-direction: column
+        flex: 0 1 30%
     &__link
         margin-bottom: 22px
         font-size: 24px
         font-weight: 600
         color: #004f9e
-    &__item
-        display: flex
-        flex-direction: column
-        flex: 0 1 30%
-        height: 200px
 .button
     border: 0
     margin-top: auto
@@ -30,7 +30,7 @@
         &:after
             content: ''
             position: absolute
-            top: 2px
+            top: 0
             right: -16px
             width: 8px
             height: 17px

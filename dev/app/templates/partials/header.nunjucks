@@ -1,0 +1,75 @@
+
+	<header class="header">
+	<div class="header__container">
+		<div class="navigation-top">
+			<ul class="nav-global">
+				<li class="nav-global__item">
+					<a href="#" class="nav-global__link">Приватним клієнтам</a>
+				</li>
+				<li class="nav-global__item">
+					<a href="#" class="nav-global__link">Юрiдичним особам</a>
+				</li>
+				<li class="nav-global__item">
+					<a href="#" class="nav-global__link">Про банк</a>
+				</li>
+				<li class="nav-global__item">
+					<a href="#" class="nav-global__link">Iнтернет-Банкiнг</a>
+				</li>
+			</ul>
+			<ul class="nav-global">
+				<li class="nav-global__item">
+					<form class="search-form">
+						<div class="search-form__content">
+							<input type="text" class="search-form__input" placeholder="пошук">
+							<button class="search-form__button"></button>
+							<div class="clearfix"></div>
+						</div>
+					</form>
+				</li>
+				<li class="nav-global__item_nogap">
+					<a href="#" class="nav-global__link">UA</a>
+				</li>
+				<li class="nav-global__item_nogap">
+					<a href="#" class="nav-global__link">EN</a>
+				</li>
+				<li class="nav-global__item_nogap">
+					<a href="#" class="nav-global__link">RU</a>
+				</li>
+				<li class="nav-global__item_nogap">
+					<a href="#" class="nav-global__link">PL</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navigation-bot">
+			<div class="logo">
+				<a class="logo__link" href="#">
+					<img class="logo__img" src="img/logo.png" alt="">
+				</a>
+			</div>
+			<ul class="nav">
+				<li class="nav__item">
+					<a href="#" class="nav__link">Кредити</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Депозити</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Рахунки та пакети</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Платіжні картки</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Страхування</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Грошові перекази</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link">Цінні папери</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</header>
+
