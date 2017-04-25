@@ -281,7 +281,7 @@ ul {
     line-height: 59px; }
 
 .list {
-  flex: 0 1 40%; }
+  flex-basis: 40%; }
   .list__item {
     padding: 2px 0; }
   .list__link {
