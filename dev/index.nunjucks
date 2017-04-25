@@ -1,0 +1,112 @@
+
+<!-- layout.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block header %}
+<!-- Adds the header partial -->
+{% include "partials/header.nunjucks" %}
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__container">
+            <section class="about">
+                <div class="about__head">
+                    <a href="#" class="about__microlink">KredoBank &ndash;</a>
+                    <h1 class="about__h1">Депозити</h1>
+                </div>
+                <div class="about__content">
+                    <div class="about__wrap">
+                        <p>Вклади від Кредобанку це надійні гарантії збереження та примноження заощаджень. Ми впевнені, що серед наших
+                        пропозицій Ви знайдете саме цей вклад, умови якого задовольнять всі Ваші очікування.</p>
+                    </div>
+                    <h2>Переваги наших депозитiв</h2>
+                    <ul class="about__list">
+                        <li>
+                            <span>Вклади у гривнях, доларах США або ЄВРО</span>
+                        </li>
+                        <li>
+                            <span>На строк від 1 дня до 20 років</span>
+                        </li>
+                        <li>
+                            <span>Отримання коштів у будь-якому банкоматі України - безкоштовно *</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="deposits">
+                <ul class="deposits__list">
+                    {#START LOOP#}
+                    {% for deposits__item in deposits %}
+                    <li class="deposits__item">
+                        <h4 class="deposits__title">
+                            <a href="#" class="deposits__link">
+                                {{deposits__item.name}}
+                            </a>
+                        </h4>
+                        <p class="deposits__textual">
+                            {{deposits__item.description}}
+                        </p>
+                        <button class="button">
+                            <span class="button__span">Замовити</span>
+                        </button>
+                    </li>
+                    {% endfor %}
+                    {#ENDLOOP#}
+                </ul>
+            </section>
+            <section class="accordeon">
+                <ul class="accordeon__menu">
+                    {#START LOOP#}
+                    {% for accordeon__item in accordeon %}
+                    <li class="accordeon__item">
+                        <div class="accordeon__header">
+                            <h3 class="accordeon__title">{{accordeon__item.name}}</h3>
+                            <button class="accordeon__plus"></button>
+                            <button class="accordeon__minus"></button>
+                        </div>
+                        <!-- Adds the navigation partial -->
+                        {% include "partials/accordeon__content.nunjucks" %}
+                         <div class="accordeon__footer">
+                            <div class="accordeon__wrap">
+                                <h4 class="accordeon__h4">{{accordeon__item.h4}}</h4>
+                                <ul class="list">
+                                    <li class="list__item">
+                                        <a class="list__link" href="#">
+                                            {{accordeon__item.list.one}}
+                                        </a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">
+                                            {{accordeon__item.list.two}}
+                                        </a>
+                                    </li>
+                                    <li class="list__item">
+                                        <a href="#" class="list__link">
+                                            {{accordeon__item.list.three}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="accordeon__fond">
+                                <h4 class="accordeon__sum">
+                                    {{accordeon__item.sum}}
+                                </h4>
+                                <p class="accordeon__textual_size_s">
+                                    {{accordeon__item.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                    {#END LOOP#}
+                </ul>
+            </section>
+        </div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+<!-- Adds the footer partial -->
+{% include "partials/footer.nunjucks" %}
+{% endblock %}

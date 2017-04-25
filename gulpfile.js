@@ -17,7 +17,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('htmlIncluder', function() {
-    gulp.src('dev/*.html')
+    gulp.src('dev/app/pages/*.html')
     	.pipe(includer())
         .pipe(gulp.dest('build/'))
 		.pipe(connect.reload());
@@ -54,7 +54,7 @@ gulp.task('movejs', function () {
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('dev/app/pages/**/*.nunjucks')
+  return gulp.src('dev/*.nunjucks')
   // Adding data to Nunjucks
   .pipe(data(function() {
     return require('./dev/app/data.json')
@@ -64,7 +64,7 @@ gulp.task('nunjucks', function() {
       path: ['dev/app/templates']
     }))
   // output files in app folder
-  .pipe(gulp.dest('dev/'))
+  .pipe(gulp.dest('dev/app/pages/'))
   .pipe(connect.reload());
 });
 //gulp.task('minify-css', function() {
@@ -86,5 +86,5 @@ gulp.task('default', function () {
 	gulp.watch(['dev/**/*.html'], ['htmlIncluder']),
 	gulp.watch(['dev/img/**/*.*'], ['move']),
   gulp.watch(['dev/js/**/*.js'], ['movejs']),
-  gulp.watch(['dev/app/**/*.nunjucks'], ['nunjucks']);
+  gulp.watch(['dev/**/*.nunjucks'], ['nunjucks']);
 });

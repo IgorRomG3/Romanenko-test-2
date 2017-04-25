@@ -218,7 +218,8 @@ ul {
     top: 15px;
     right: 20px;
     background-image: url("../img/plus-img.png");
-    background-position: center; }
+    background-position: center;
+    outline: none; }
     .accordeon__plus_hidden {
       display: none; }
   .accordeon__minus {
@@ -232,6 +233,7 @@ ul {
     background-image: url("../img/minus-img.png");
     background-repeat: no-repeat;
     background-position: center;
+    outline: none;
     display: none; }
     .accordeon__minus_visiable {
       display: block; }
@@ -254,6 +256,7 @@ ul {
     margin-left: 5px;
     color: #f18b00; }
   .accordeon__h4 {
+    display: inline;
     font-family: Lato;
     line-height: 30px;
     color: #000;
@@ -278,8 +281,7 @@ ul {
     line-height: 59px; }
 
 .list {
-  flex-basis: 40%;
-  flex-basis: 200px; }
+  flex: 0 1 40%; }
   .list__item {
     padding: 2px 0; }
   .list__link {
