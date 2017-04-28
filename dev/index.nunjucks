@@ -68,7 +68,9 @@
                             <button class="accordeon__minus"></button>
                         </div>
                         <!-- Adds the navigation partial -->
-                        {{accordeon__item.content | safe}}
+                        <p class="accordeon__textual">
+                            {{accordeon__item.content | safe}}
+                        </p>
                          <div class="accordeon__footer">
                             <div class="accordeon__wrap">
                                 <h4 class="accordeon__h4">
