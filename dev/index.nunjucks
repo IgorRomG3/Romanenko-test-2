@@ -2,11 +2,6 @@
 <!-- layout.nunjucks -->
 {% extends "layout.nunjucks" %}
 
-{% block header %}
-<!-- Adds the header partial -->
-{% include "partials/header.nunjucks" %}
-{% endblock %}
-
 {% block main %}
     <main class="main">
         <div class="main__container">
@@ -110,9 +105,4 @@
             </section>
         </div>
     </main>
-{% endblock %}
-
-{% block footer %}
-<!-- Adds the footer partial -->
-{% include "partials/footer.nunjucks" %}
 {% endblock %}
