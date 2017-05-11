@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
   connect = require('gulp-connect'),
-  includer = require('gulp-htmlincluder'),
   sass = require('gulp-sass'),
   nunjucks = require('nunjucks'),
   nunjucksRender = require('gulp-nunjucks-render'),
@@ -14,13 +13,6 @@ gulp.task('connect', function() {
     root: 'build',
     livereload: true
   });
-});
-
-gulp.task('htmlIncluder', function() {
-    gulp.src('dev/app/pages/*.html')
-    	.pipe(includer())
-        .pipe(gulp.dest('build/'))
-		.pipe(connect.reload());
 });
 
 gulp.task('sass', function () {
@@ -54,17 +46,17 @@ gulp.task('movejs', function () {
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('dev/*.nunjucks')
+  return gulp.src('dev/*.+(html|nunjucks)')
   // Adding data to Nunjucks
   .pipe(data(function() {
-    return require('./dev/app/data.json')
+    return require('./dev/templates/data.json')
   }))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
-      path: ['dev/app/templates']
+      path: ['dev/templates']
     }))
   // output files in app folder
-  .pipe(gulp.dest('dev/app/pages/'))
+  .pipe(gulp.dest('build/'))
   .pipe(connect.reload());
 });
 //gulp.task('minify-css', function() {
@@ -81,9 +73,9 @@ gulp.task('nunjucks', function() {
 
 
 gulp.task('default', function () {
-  gulp.start('connect', 'sass','htmlIncluder','move','movejs','nunjucks'),
+  gulp.start('connect', 'sass','move','movejs','nunjucks'),
 	gulp.watch(['dev/sass/**/*.sass'], ['sass']),
-	gulp.watch(['dev/**/*.html'], ['htmlIncluder']),
+	gulp.watch(['dev/**/*.html'], ['nunjucks']),
 	gulp.watch(['dev/img/**/*.*'], ['move']),
   gulp.watch(['dev/js/**/*.js'], ['movejs']),
   gulp.watch(['dev/**/*.nunjucks'], ['nunjucks']);
