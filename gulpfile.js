@@ -46,19 +46,20 @@ gulp.task('movejs', function () {
 
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
-  return gulp.src('dev/*.+(html|nunjucks)')
+  return gulp.src('dev/templates/*.+(html|nunjucks)')
   // Adding data to Nunjucks
   .pipe(data(function() {
-    return require('./dev/templates/data.json')
+    return require('./dev/templates/data/data.json')
   }))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
-      path: ['dev/templates']
+      path: ('dev/templates/layouts/')
     }))
   // output files in app folder
   .pipe(gulp.dest('build/'))
   .pipe(connect.reload());
 });
+
 //gulp.task('minify-css', function() {
 //  return gulp.src('build/css/*.css')
 //    .pipe(cleanCSS({compatibility: 'ie8'}))
